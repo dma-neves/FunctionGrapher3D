@@ -3,8 +3,9 @@
 #include <iostream>
 
 FunctionGrapher::FunctionGrapher(int windowWidth, int windowHeight, std::string windowTitle) :
-window(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Close), camera(Vector2D(), Vector2D())
+window(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Close), camera(Vector3D(), Vector3D())
 {
+    //Create 3D Object
 }
 
 void FunctionGrapher::run()
@@ -21,19 +22,19 @@ void FunctionGrapher::run()
 
 void FunctionGrapher::update()
 {
-    projectedLineSegs = Projector::getProjectedLineSegs(&camera, &lineSegs);
+    obj2d = Projector::projectObject(&camera, &obj3d);
 }
 
 void FunctionGrapher::render()
 {
     window.clear();
 
-    for(LineSeg& lineSeg : projectedLineSegs)
+    for(std::pair<Vector2D, Vector2D>& lineSeg : obj2d.lineSegments)
     {
         sf::VertexArray line(sf::LinesStrip, 2);
-        line[0].position = lineSeg.point[0].sfVector();
+        line[0].position = lineSeg.first.sfVector();
         line[0].color  = sf::Color::White;
-        line[1].position = lineSeg.point[1].sfVector();
+        line[1].position = lineSeg.second.sfVector();
         line[1].color = sf::Color::White;
 
         window.draw(line);

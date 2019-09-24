@@ -1,17 +1,14 @@
 #ifndef VECTOR2D_H
 #define VECTOR2D_H
 
+#include <iostream>
 #include <cmath>
 #include <SFML/Graphics.hpp>
-#include <iostream>
 
 class Vector2D
 {
 public:
     Vector2D(float x = 0, float y = 0);
-    Vector2D(sf::Vector2f vec);
-    Vector2D(sf::Vector2i vec);
-    Vector2D(sf::Vector2u vec);
 
     float x, y;
 
@@ -27,9 +24,9 @@ public:
     void operator=(float num);
 
     bool operator==(Vector2D vec) { return (x == vec.x && y == vec.y); }
-    bool operator!=(Vector2D vec) { return (x != vec.x && y != vec.y); }
+    bool operator!=(Vector2D vec) { return !(*this==vec); }
 
-    Vector2D& setMagnitude(float mag);
+    void setMagnitude(float mag) { *this *= (mag / magnitude()); }
     float magnitude();
     bool null();
     float angle(Vector2D vec);

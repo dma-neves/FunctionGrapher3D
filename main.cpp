@@ -1,4 +1,4 @@
-#include "src/FunctionGrapher.h"
+#include "FunctionGrapher.h"
 
 int main()
 {

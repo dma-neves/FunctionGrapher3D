@@ -5,6 +5,8 @@
 #include <SFML/Graphics.hpp>
 
 #include "Projector.h"
+#include "Object2D.h"
+#include "Object3D.h"
 
 class FunctionGrapher
 {
@@ -20,8 +22,8 @@ private:
 
     bool isRunning = true;
     Camera camera;
-    std::vector<LineSeg> lineSegs;
-    std::vector<LineSeg> projectedLineSegs;
+    Object3D obj3d;
+    Object2D obj2d;
 
     sf::RenderWindow window;
     sf::Clock clock;
