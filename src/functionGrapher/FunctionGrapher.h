@@ -4,6 +4,8 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 
+#define DT_MULTIPLIER 3
+
 #include "Projector.h"
 #include "Object2D.h"
 #include "Object3D.h"

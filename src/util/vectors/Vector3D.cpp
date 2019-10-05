@@ -71,3 +71,10 @@ bool Vector3D::null()
 {
    return (x == 0 && y == 0 && z == 0);
 }
+
+Vector3D Vector3D::unitVector()
+{
+    Vector3D vec = *this;
+    vec.setMagnitude(1);
+    return vec;
+}

@@ -28,6 +28,9 @@ public:
     void setMagnitude(float mag) { *this *= (mag / magnitude()); }
     float magnitude();
     bool null();
+    Vector3D unitVector();
+
+    float dot(Vector3D vec) { return x * vec.x + y * vec.y + z * vec.z; }
 };
 
 #endif // Vector3D_H
