@@ -3,7 +3,7 @@ LIBS = -lsfml-graphics -lsfml-window -lsfml-system
 
 CPPC=g++ -std=c++11 -g
 
-OBJECT_FILES=obj/main.o obj/FunctionGrapher.o obj/Projector.o obj/Vector2D.o obj/Vector3D.o
+OBJECT_FILES=obj/main.o obj/FunctionGrapher.o obj/Projector.o obj/Vector2D.o obj/Vector3D.o obj/Camera.o
 
 FunctionGrapher.out: $(OBJECT_FILES)
 	$(CPPC) $(OBJECT_FILES) -o bin/FunctionGrapher.out $(LIBS)
@@ -22,6 +22,9 @@ obj/Vector2D.o: src/util/vectors/Vector2D.h src/util/vectors/Vector2D.cpp
 
 obj/Vector3D.o: src/util/vectors/Vector3D.h src/util/vectors/Vector3D.cpp
 	$(CPPC) -c src/util/vectors/Vector3D.cpp -I $(INC_DIRECOTRY) -o obj/Vector3D.o
+
+obj/Camera.o: src/rendering/Camera.h src/rendering/Camera.cpp
+	$(CPPC) -c src/rendering/Camera.cpp -I $(INC_DIRECOTRY) -o obj/Camera.o
 
 clean:
 	rm obj/*.o bin/FunctionGrapher.out

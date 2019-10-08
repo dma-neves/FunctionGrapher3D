@@ -4,9 +4,9 @@ Object2D Projector::projectObject(Camera* camera, Object3D* obj3d)
 {
     Object2D obj2d;
 
-    for(std::pair<Vector3D, Vector3D>& ls : obj3d->lineSegments)
+    for(LineSeg<Vector3D>& ls : obj3d->lineSegments)
     {
-        obj2d.addLineSeg(std::pair<Vector2D, Vector2D>( projectPointToWindow(camera, ls.first), projectPointToWindow(camera, ls.second) ));
+        obj2d.addLineSeg(LineSeg<Vector2D>( projectPointToWindow(camera, ls.pt_a), projectPointToWindow(camera, ls.pt_b), ls.color ));
     }
     return obj2d;
 }

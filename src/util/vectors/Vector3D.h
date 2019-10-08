@@ -4,6 +4,8 @@
 #include <iostream>
 #include <cmath>
 
+#include "Quaternion.h"
+
 class Vector3D
 {
 public:
@@ -31,6 +33,8 @@ public:
     Vector3D unitVector();
 
     float dot(Vector3D vec) { return x * vec.x + y * vec.y + z * vec.z; }
+
+    Vector3D rotate(Vector3D axis, float angle);
 };
 
 #endif // Vector3D_H

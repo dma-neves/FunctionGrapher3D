@@ -7,8 +7,7 @@
 #define DT_MULTIPLIER 3
 
 #include "Projector.h"
-#include "Object2D.h"
-#include "Object3D.h"
+#include "Object.h"
 
 class FunctionGrapher
 {

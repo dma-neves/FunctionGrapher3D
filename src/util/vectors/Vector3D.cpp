@@ -78,3 +78,11 @@ Vector3D Vector3D::unitVector()
     vec.setMagnitude(1);
     return vec;
 }
+
+Vector3D Vector3D::rotate(Vector3D axis, float angle)
+{
+    Quaternion q1(0,x, y, z);
+    Quaternion q2(cos(angle/2), axis.x*sin(angle/2), axis.y*sin(angle/2), axis.z*sin(angle/2));
+    Quaternion q3 = q2 * q1 * q2.conjugate();
+    x = q3.x; y = q3.y; z = q3.z;
+}
