@@ -6,7 +6,8 @@ Object2D Projector::projectObject(Camera* camera, Object3D* obj3d)
 
     for(LineSeg<Vector3D>& ls : obj3d->lineSegments)
     {
-        obj2d.addLineSeg(LineSeg<Vector2D>( projectPointToWindow(camera, ls.pt_a), projectPointToWindow(camera, ls.pt_b), ls.color ));
+        if(viewable(camera, ls))
+            obj2d.addLineSeg(LineSeg<Vector2D>( projectPointToWindow(camera, ls.pt_a), projectPointToWindow(camera, ls.pt_b), ls.color ));
     }
     return obj2d;
 }
@@ -32,4 +33,14 @@ Vector2D Projector::projectPointToWindow(Camera* camera, Vector3D& pt)
     projectedPt.x = relative_pt.dot(camera->virtual_x_axis.unitVector()) * camera->scaler.x;
     projectedPt.y = relative_pt.dot(camera->virtual_y_axis.unitVector()) * camera->scaler.y;
     return projectedPt;
+}
+
+bool Projector::viewable(Camera* camera, LineSeg<Vector3D> ls)
+{
+    Vector3D aux = ls.pt_a - camera->pos;
+    if(camera->direction.angle(aux) >= M_PI/2.0f) return false;
+    aux = ls.pt_b - camera->pos;
+    if(camera->direction.angle(aux) >= M_PI/2.0f) return false;
+
+    return true;
 }

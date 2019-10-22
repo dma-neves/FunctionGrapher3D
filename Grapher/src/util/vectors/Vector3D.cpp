@@ -86,3 +86,13 @@ Vector3D Vector3D::rotate(Vector3D axis, float angle)
     Quaternion q3 = q2 * q1 * q2.conjugate();
     x = q3.x; y = q3.y; z = q3.z;
 }
+
+float Vector3D::angle(Vector3D vec)
+{
+    float c = dot(vec) / (magnitude() * vec.magnitude());
+
+    if(c >= -1.0f and c <= 1.0f) return acos(c);
+
+    //else std::cout << "Error: Invalid cos value: " << c << std::endl;
+    return 0;
+}

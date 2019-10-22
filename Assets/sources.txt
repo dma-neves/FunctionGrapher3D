@@ -1,3 +1,0 @@
-http://paulbourke.net/geometry/rotate/
-http://www.ncsa.illinois.edu/People/kindr/emtc/quaternions/quaternion.c++
-http://www.ncsa.illinois.edu/People/kindr/emtc/quaternions/quaternion.h

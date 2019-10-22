@@ -14,14 +14,6 @@ public:
         this->z = z;
     }
 
-    /*Quaternion(Quaternion& quaternion)
-    {
-        this->w = quaternion.w;
-        this->x = quaternion.x;
-        this->y = quaternion.y;
-        this->z = quaternion.z;
-    }*/
-
     Quaternion operator + (Quaternion& q) { return Quaternion(w + q.w, x + q.x, y + q.y, z + q.z); }
     Quaternion operator - (Quaternion& q) { return Quaternion(w + q.w, x + q.x, y + q.y, z + q.z); }
     Quaternion operator * (Quaternion q) 

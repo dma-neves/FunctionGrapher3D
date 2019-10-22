@@ -28,13 +28,13 @@ public:
     bool operator!=(Vector3D vec) { return !(*this==vec); }
 
     void setMagnitude(float mag) { *this *= (mag / magnitude()); }
+    Vector3D unitVector();
     float magnitude();
     bool null();
-    Vector3D unitVector();
 
-    float dot(Vector3D vec) { return x * vec.x + y * vec.y + z * vec.z; }
-
+    float angle(Vector3D vec);
     Vector3D rotate(Vector3D axis, float angle);
+    float dot(Vector3D vec) { return x * vec.x + y * vec.y + z * vec.z; }
 };
 
 #endif // Vector3D_H

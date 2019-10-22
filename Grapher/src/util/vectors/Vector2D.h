@@ -29,6 +29,7 @@ public:
     void setMagnitude(float mag) { *this *= (mag / magnitude()); }
     float magnitude();
     bool null();
+    
     float angle(Vector2D vec);
     void rotate(float angle);
 

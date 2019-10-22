@@ -75,7 +75,6 @@ float Vector2D::angle(Vector2D vec)
     if(c >= -1 and c <= 1) return acos(c);
 
     else std::cout << "Error: Invalid cos value: " << c << std::endl;
-
     return 0;
 }
 

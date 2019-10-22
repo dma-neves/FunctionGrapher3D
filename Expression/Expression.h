@@ -1,0 +1,1 @@
+#define EXPRESSION sin(x) * cos(y)

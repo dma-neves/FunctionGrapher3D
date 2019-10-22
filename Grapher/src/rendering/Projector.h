@@ -14,6 +14,8 @@ public:
 private:
     static Vector3D projectPointSpatially(Camera* camera, Vector3D& pt);
     static Vector2D projectPointToWindow(Camera* camera, Vector3D& pt);
+
+    static bool viewable(Camera* camera, LineSeg<Vector3D> ls);
 };
 
 #endif
