@@ -33,6 +33,14 @@ void Camera::moveStraight(float disp)
     pos += aux;
 }
 
+void Camera::rotateVertically(float angle)
+{
+    Vector3D axis = virtual_x_axis.unitVector();
+    pos.rotate(axis, angle);
+    direction.rotate(axis, angle);
+    virtual_y_axis.rotate(axis, angle);
+}
+
 void Camera::rotateAround_z(float angle)
 {
     Vector3D axis(0,0,1);

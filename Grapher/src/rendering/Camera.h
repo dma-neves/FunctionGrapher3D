@@ -13,6 +13,7 @@ public:
     Vector3D get_vw_origin(); // Get virtual window origin
 
     void moveStraight(float disp);
+    void rotateVertically(float angle);
     void rotateAround_z(float angle);
 
     Vector3D pos, direction;
