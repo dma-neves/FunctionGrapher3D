@@ -15,12 +15,12 @@
       - A more comprehensive installation guide can be found at (https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
       
   2. *Compiling and running the function modifier*
-      - Inside the folder/directory 'FunctionModifier' you can compile the program using the `make` command
-      - To run it use the command `./FunctionModifier.out`
+      - Inside the folder/directory 'FunctionModifier' you can compile the program using the Makefile (`make` command)
+      - The executable FunctionModifier.out will be created to run it
       
   3. *Compiling and running the function grapher*
-      - Inside the directory 'Grapher' you can compile the program using the `make` command
-      - To run it continue to the 'bin' directory and use the command `./FunctionGrapher.out`
+      - Inside the directory 'Grapher' you can compile the program using the Makefile (`make` command)
+      - To run it continue to the 'bin' directory where you will find the executable FunctionGrapher.out
       
  **Camera controls:**
    - W, A, S, D for rotation
