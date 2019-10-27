@@ -16,7 +16,7 @@
       
   2. *Compiling and running the function modifier*
       - Inside the folder/directory 'FunctionModifier' you can compile the program using the Makefile (`make` command)
-      - The executable FunctionModifier.out will be created to run it
+      - Use the executable FunctionModifier.out to run it
       
   3. *Compiling and running the function grapher*
       - Inside the directory 'Grapher' you can compile the program using the Makefile (`make` command)
