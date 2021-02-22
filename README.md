@@ -1,4 +1,5 @@
 # FunctionGrapher3D
+![](https://github.com/dma-neves/FunctionGrapher3D/blob/master/other/function.gif)
 
 **Description:**
   - A softawre renderer created to graph/plot 3d functions
@@ -10,17 +11,9 @@
   2. GCC(G++) compiler
 
 **Building and running (Linux):**
-  1. *Installing SFML*
-      - Use the command `sudo apt-get install libsfml-dev`
-      - A more comprehensive installation guide can be found at (https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
-      
-  2. *Compiling and running the function modifier*
-      - Inside the folder/directory 'FunctionModifier' you can compile the program using the Makefile
-      - Use the executable FunctionModifier.out to run it
-      
-  3. *Compiling and running the function grapher*
-      - Inside the directory 'Grapher' you can compile the program using the Makefile
-      - To run it continue to the 'bin' directory where you will find the executable FunctionGrapher.out
+  - Installing SFML: https://www.sfml-dev.org/tutorials/2.5/start-linux.php    
+  - Compiling and running the function modifier: The included makefile will generate the executable FunctionModifier.out
+  - Compiling and running the function grapher: The included makefile will generate the executable FunctionGrapher.out inside the bin folder
       
  **Camera controls:**
    - W, A, S, D for rotation
