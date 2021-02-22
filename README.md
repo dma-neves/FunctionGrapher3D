@@ -11,15 +11,15 @@
 
 **Building and running (Linux):**
   1. *Installing SFML*
-      - Use the command `sudo apt-get install libsfml-dev` using the terminal
+      - Use the command `sudo apt-get install libsfml-dev`
       - A more comprehensive installation guide can be found at (https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
       
   2. *Compiling and running the function modifier*
-      - Inside the folder/directory 'FunctionModifier' you can compile the program using the Makefile (`make` command)
+      - Inside the folder/directory 'FunctionModifier' you can compile the program using the Makefile
       - Use the executable FunctionModifier.out to run it
       
   3. *Compiling and running the function grapher*
-      - Inside the directory 'Grapher' you can compile the program using the Makefile (`make` command)
+      - Inside the directory 'Grapher' you can compile the program using the Makefile
       - To run it continue to the 'bin' directory where you will find the executable FunctionGrapher.out
       
  **Camera controls:**
